@@ -171,6 +171,18 @@ img {
 /**
  * 4.0 - Forms
  */
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
 input {
   line-height: normal;
 }
