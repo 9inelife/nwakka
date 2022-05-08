@@ -107,7 +107,7 @@
 	<section class="banner banner-1">
 		<div class="banner-content">
 			<div class="container">
-				<div class="banner-content-text">
+				<div class="banner-content-text reveal">
 					<h1 class="text-capitalize"><span class="d-sm-block"></span> A brighter Future For Abia State</h1>
 					<h6>We can only build great communities if we ensure
 					</h6><h6>that everyone has equal access to opportunities.
@@ -129,10 +129,10 @@
 					<div class="col-xl-5">
 						<div class="about-politican">
 							<div class="about-bio d-flex flex-wrap">
-								<div class="politician-thumb">
+								<div class="politician-thumb reveal">
 									<img src="../../assets/images/homepage1/banner/sen.png" alt="thumb">
 								</div>
-								<div class="politician-content text-center text-sm-left">
+								<div class="politician-content text-center text-sm-left reveal">
 									<h4 class="name">Emma Nwaka</h4>
 									<p class="designation">Father, Proud Abian, State Builder</p>
 									<ul class="social-media justify-content-center justify-content-md-start">
@@ -142,8 +142,8 @@
 									</ul>
 								</div>
 							</div>
-							<div class="about-qoute">
-								<h5>MY AGENDA</h5>
+							<div class="about-qoute reveal">
+								<h5 >MY AGENDA</h5>
 								<p>I shall run an inclusive and accountable government with sincerity of purpose and transparency to ensure the prosperity of the state across all areas.
 									</p><p style="font-weight: bolder; font-size: large;">Emma’s Top Priorities As Governor</p>
 									<ul>
@@ -156,7 +156,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-7">
+					<div class="col-xl-7 reveal">
 						<div class="about-media row no-gutters">
 							<div class="col-md-12">
 								<div class="media-thumb">
@@ -199,12 +199,12 @@
 	<!--   start election campaign section -->
 	<section class="election-campaign-section">
 		<div class="section-overlay section-padding-140">
-			<div class="section-heading">
+			<div class="section-heading reveal">
 				<h6>Upcoming Events</h6>
 				<h2>PDP Governoship Primaries</h2>
 			</div>
 			<div class="section-wrapper">
-				<div class="campaign-countdown">
+				<div class="campaign-countdown reveal">
 					<ul id="countdown" class="countdown">
 						<li class="countdown-item">
 							<div class="countdown-item-inner">
@@ -239,7 +239,7 @@
 
 	<!-- start latest news section  -->
 	<section class="latest-news-section section-padding-140 section-bg-color">
-		<div class="container">
+		<div class="container reveal">
 			<div class="section-heading">
 				<h2>Latest Campaign News</h2>
 				
@@ -304,7 +304,7 @@
 	<!-- start quick-donation-section -->
 	<section class="quick-donation-section">
 		<div class="section-overlay section-padding-140">
-			<div class="container">
+			<div class="container reveal">
 				<div class="section-heading">
 					<h2>Make a Quick Donation Here</h2>
 					<p>The financial support of friends like you will be vital to my campaign's success. Please consider making a donation today. Thank you for your support!</p>
@@ -331,8 +331,8 @@
 
 
 	<!-- start campaign-program section -->
-	<section class="latest-news-section section-padding-140 section-bg-color">
-		<div class="container">
+	<section class="latest-news-section section-padding-140 section-bg-color reveal">
+		<div class="container ">
 			<div class="section-heading">
 				<h2>Campaign and Programs</h2>
 				
@@ -343,14 +343,14 @@
 							<a href="single.html"><img src="../../assets/images/homepage1/banner/cam.jpg" alt="thumb"></a>
 					
 					</div> 
-	
+				</div>
 				</section>
 	<!-- end campaign-program section -->
 
 
 	<!-- start become-member-section -->
 	<section class="become-member-section">
-		<div class="section-overlay section-padding-140">
+		<div class="section-overlay section-padding-140 reveal">
 			<div class="container">
 				<div class="section-heading">
 					<h3>Get Involved!</h3>
@@ -376,7 +376,7 @@
 
 	<!-- start newsletter-section -->
 	<section class="newsletter-section section-padding-140 section-bg-color">
-		<div class="container">
+		<div class="container reveal">
 			<div class="row justify-content-center no-gutters">
 				<div class="col-lg-6">
 					<div class="section-heading">
@@ -588,6 +588,30 @@ setInterval(countdown, 1000);
 
 
 </script>
-
+</script>
+		<!-- Footer -->
+	  
+	<!-- Scripts -->
+	<script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+    
+        function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+    
+          for(var i = 0; i < reveals.length; i++){
+    
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+    
+            if(revealtop < windowheight - revealpoint){
+              reveals[i].classList.add('active');
+            }
+            else{
+              reveals[i].classList.remove('active');
+            }
+          }
+        }
+        </script>
 </body>
 </html>
